@@ -1,4 +1,5 @@
 .grid {
+  user-select: none;
   display: grid;
   grid-template-columns: repeat(24, 22px);
   grid-auto-columns: 22px;
@@ -7,23 +8,33 @@
   justify-items: center;
   gap: 0.3rem;
   margin-top: 1rem;
+  border-radius: 11px;
 }
 
 .grid-item {
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 }
 
 .grid-img {
   border-radius: inherit;
 }
 
-.svg-fill {
-  fill: white;
-}
-
 .clicked .svg-fill {
   fill: #b1b1b1;
+}
+
+.clicked.correct .svg-fill {
+  fill: rgb(0, 255, 0, 0.7);
+}
+
+.clicked.incorrect .svg-fill {
+  fill: rgb(255, 0, 0, 0.7);
+}
+
+.missed.correct .svg-fill {
+  fill: rgb(0, 0, 255, 0.7);
 }
 
 .container {
@@ -31,4 +42,31 @@
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  margin-bottom: 0.5rem;
+  width: min-content;
+  font-size: 20px;
+}
+
+.cell-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 14px;
+  font-weight: 700;
 }
