@@ -210,7 +210,7 @@ function App() {
               Нажмите кнопку <b>Start</b>
             </li>
             <li>
-              Нажимайте по порядку на{' '}
+              Нажимайте слева направо по рядам по порядку на{' '}
               <div style={{ display: 'inline-block' }}>
                 <Cell cell={{ rotation: 2 }} width={20} height={20} />
               </div>{' '}

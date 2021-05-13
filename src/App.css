@@ -69,4 +69,5 @@
   transform: translate(-50%, -50%);
   line-height: 14px;
   font-weight: 700;
+  z-index: 1;
 }
